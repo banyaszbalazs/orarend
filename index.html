@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Órarend</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Alap beállítások */
+<style>
+        | ALAP DIZÁJN
         * {
             box-sizing: border-box;
             margin: 0;
@@ -24,7 +24,7 @@
             min-height: 100vh;
             padding: 20px;
             color: #f0f0f0;
-            backdrop-filter: blur(4px); /* Háttér enyhe homályosítása */
+            backdrop-filter: blur(4px); 
         }
         h1, h2 {
             font-weight: 600;
@@ -35,7 +35,7 @@
         }
 
         .table-container {
-            background: rgba(0, 0, 0, 0.7); /* Átlátszó, sötét háttér */
+            background: rgba(0, 0, 0, 0.7);
             width: 90%;
             max-width: 900px;
             border-radius: 12px;
@@ -75,8 +75,8 @@
             color: #f0f0f0;
         }
 
-        /* Csengetési rend tábla */
-        .schedule-table-container {
+   
+        .csengetesi_rend_tablazat {
             width: 90%;
             max-width: 500px;
             margin-top: 20px;
@@ -90,10 +90,10 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
-        /* Mobilnézet */
+       | Mobil nézet
         @media (max-width: 768px) {
             .table-container {
-                overflow-x: auto; /* Mobilon vízszintes görgetés */
+                overflow-x: auto; 
             }
             th, td {
                 padding: 10px;
@@ -108,7 +108,7 @@
 
     <h1>Órarend</h1>
 
-    <div class="table-container">
+    <div class="orarend">
         <table>
             <thead>
                 <tr>
@@ -199,7 +199,7 @@
 
     <h2>Csengetési rend</h2>
 
-    <div class="table-container schedule-table-container">
+    <div class="orarend csengetesi_rend_tablazat">
         <table>
             <thead>
                 <tr>
