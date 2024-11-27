@@ -5,100 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Órarend</title>
     <style>
-         {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
             font-family: Arial, sans-serif;
-            background-image: url('hatter.png');
+            background: url('hatter.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            padding: 20px;
             color: #fff;
-            backdrop-filter: blur(6px); 
+            text-align: center;
+            padding: 20px;
+            backdrop-filter: blur(6px);
         }
         h1 {
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #ffffff;
-            text-align: center;
-            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
         }
         .table-container {
-            background: rgba(0, 0, 0, 0.7); 
-            width: 90%;
-            max-width: 900px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-            overflow: hidden;
-            margin-bottom: 20px;
+            max-width: 900px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            color: #ffffff; 
+            color: #fff;
         }
         th, td {
-            padding: 15px;
+            padding: 10px;
+            border: 1px solid #444;
             text-align: center;
-            font-size: 1em;
-            border: 1px solid #444; 
         }
-        thead th {
+        th {
             background-color: #000;
-            color: #ffffff;
-            font-weight: bold;
-            text-shadow: 0px 0px 6px #ffffff, 0px 0px 6px #ffffff;
+            text-shadow: 0 0 6px #fff;
         }
-        tbody td {
-            background-color: rgba(255, 255, 255, 0.05);
-            transition: background 0.3s;
-        }
-        tbody tr:hover td {
+        td {
             background-color: rgba(255, 255, 255, 0.1);
         }
         .button {
-            display: inline-block;
-            margin: 20px auto;
             padding: 10px 20px;
-            background: linear-gradient(45deg, #ffffff, #dddddd);
+            background: #fff;
             color: #000;
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
             border-radius: 50px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s;
         }
         .button:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.7);
-        }
-        @media (max-width: 768px) {
-            .table-container {
-                overflow-x: auto; 
-            }
-            th, td {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-        footer {
-            margin-top: 20px;
-            color: #bbb;
-            font-size: 0.9em;
-            text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -119,87 +74,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>0. óra</td>
-                    <td>-</td>
-                    <td>Testnevelés</td>
-                    <td>-</td>
-                    <td>Angol nyelv</td>
-                    <td>Angol nyelv</td>
-                </tr>
-                <tr>
-                    <td>1. óra</td>
-                    <td>IKT projektmunka</td>
-                    <td>Testnevelés</td>
-                    <td>Magyar nyelv és irodalom</td>
-                    <td>Történelem</td>
-                    <td>Digitális kultúra</td>
-                </tr>
-                <tr>
-                    <td>2. óra</td>
-                    <td>Matematika</td>
-                    <td>Magyar nyelv és irodalom</td>
-                    <td>Testnevelés</td>
-                    <td>Honvédelem</td>
-                    <td>Digitális kultúra</td>
-                </tr>
-                <tr>
-                    <td>3. óra</td>
-                    <td>Angol</td>
-                    <td>Angol</td>
-                    <td>Komplex természettudomány</td>
-                    <td>IKT projektmunka</td>
-                    <td>Matematika</td>
-                </tr>
-                <tr>
-                    <td>4. óra</td>
-                    <td>Programozási alapok</td>
-                    <td>Osztályfőnöki</td>
-                    <td>Matematika</td>
-                    <td>Matematika</td>
-                    <td>Történelem</td>
-                </tr>
-                <tr>
-                    <td>5. óra</td>
-                    <td>Programozási alapok</td>
-                    <td>Informatika és távk.</td>
-                    <td>Magyar nyelv és irodalom</td>
-                    <td>Komplex természettudomány</td>
-                    <td>Komplex természettudomány</td>
-                </tr>
-                <tr>
-                    <td>6. óra</td>
-                    <td>Testnevelés</td>
-                    <td>Informatika és távk.</td>
-                    <td>Magyar nyelv és irodalom</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>7. óra</td>
-                    <td>Történelem</td>
-                    <td>Informatika és távk.</td>
-                    <td>Angol nyelv</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>8. óra</td>
-                    <td>Magyar nyelv és irodalom</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
+                <tr><td>0. óra</td><td>-</td><td>Testnevelés</td><td>-</td><td>Angol nyelv</td><td>Angol nyelv</td></tr>
+                <tr><td>1. óra</td><td>IKT projektmunka</td><td>Testnevelés</td><td>Magyar nyelv</td><td>Történelem</td><td>Digitális kultúra</td></tr>
+                <tr><td>2. óra</td><td>Matematika</td><td>Magyar nyelv</td><td>Testnevelés</td><td>Honvédelem</td><td>Digitális kultúra</td></tr>
+                <tr><td>3. óra</td><td>Angol</td><td>Angol</td><td>Komplex természettudomány</td><td>IKT projektmunka</td><td>Matematika</td></tr>
+                <tr><td>4. óra</td><td>Programozás</td><td>Osztályfőnöki</td><td>Matematika</td><td>Matematika</td><td>Történelem</td></tr>
+                <tr><td>5. óra</td><td>Programozás</td><td>Informatika</td><td>Magyar nyelv</td><td>Komplex természettudomány</td><td>Komplex természettudomány</td></tr>
+                <tr><td>6. óra</td><td>Testnevelés</td><td>Informatika</td><td>Magyar nyelv</td><td>-</td><td>-</td></tr>
+                <tr><td>7. óra</td><td>Történelem</td><td>Informatika</td><td>Angol nyelv</td><td>-</td><td>-</td></tr>
+                <tr><td>8. óra</td><td>Magyar nyelv</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
             </tbody>
         </table>
     </div>
 
-    <a href="index.html" class="button">Vissza a főoldalra</a>
-
-    <footer>
-        Készítette: Bányász Balázs
-    </footer>
+    <a href="fooldal.html" class="button">Vissza a főoldalra</a>
 
 </body>
 </html>
