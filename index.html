@@ -5,69 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Főoldal</title>
     <style>
-         {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
             font-family: Arial, sans-serif;
-            background-image: url('hatter.png');
+            background: url('hatter.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            padding: 20px;
             color: #fff;
-            backdrop-filter: blur(6px); 
+            text-align: center;
+            padding: 20px;
+            backdrop-filter: blur(6px);
         }
         h1 {
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #ffffff;
-            text-align: center;
-            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
         }
-        .szovegdoboz {
-            background: rgba(0, 0, 0, 0.7);
-            width: 90%;
-            max-width: 700px;
+        .content-box {
+            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+        p {
             margin-bottom: 20px;
         }
-        .buttons {
-            margin-top: 20px;
-        }
         .button {
-            display: inline-block;
-            margin: 10px;
             padding: 10px 20px;
-            background: linear-gradient(45deg, #ffffff, #dddddd);
+            background: #fff;
             color: #000;
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
             border-radius: 50px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s;
         }
         .button:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.7);
-        }
-        footer {
-            margin-top: 20px;
-            color: #bbb;
-            font-size: 0.9em;
-            text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -77,15 +48,8 @@
 
     <div class="content-box">
         <p>Bányász Balázs vagyok, 14 éves, és jelenleg a Miskolci SZC Kandó Kálmán szakközépiskolába járok. Kiskorom óta érdekel az informatika, ezért arra a döntésre jutottam, hogy ebbe kezdek bele. Szeretek focizni, barátaimmal lenni, és játszani.</p>
+        <a href="orarend.html" class="button">Órarend</a>
     </div>
-
-    <div class="gombok">
-        <a href="orarend.html" class="gombok">Órarend</a>
-    </div>
-
-    <footer>
-        Készítette: Bányász Balázs
-    </footer>
 
 </body>
 </html>
