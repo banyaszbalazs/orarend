@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kanjaink – Cortex Royal Mopsz Kennel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ddd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+    header, footer {
+      background-color: #070707;
+      border-color: #0080ff;
+      border-style: solid;
+      border-width: 0 0 2px 0;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover, nav a.active {
+      color: #0080ff;
+    }
+    h1, h2, h3 {
+      color: #0080ff;
+      text-shadow: 0 0 8px #0099ff, 0 0 16px #0080ff;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section.card {
+      background-color: #121212;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,128,255,0.2);
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    section.card:hover {
+      box-shadow: 0 0 18px rgba(0,128,255,0.5);
+    }
+    section.card img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header class="px-6 py-4 flex justify-between items-center max-w-6xl mx-auto">
+    <h1>🐾 Silver Paw Kennel</h1>
+    <nav class="space-x-6 text-lg">
+      <a href="index.html">Főoldal</a>
+      <a href="elerhetokutyak.html">Kölykök</a>
+      <a href="szukaink.html">Szukáink</a>
+      <a href="kanjaink.html" class="active">Kanjaink</a>
+      <a href="elerhetoseg.html">Kapcsolat</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Kan kutyáink</h2>
+    <section class="card">
+      <img src="https://placedog.net/400/301?id=10" alt="Balu" />
+      <div>
+        <h3>Balu</h3>
+        <p>6 éves, FCI törzskönyves, nyugodt temperamentumú kan.</p>
+      </div>
+    </section>
+    <section class="card">
+      <img src="https://placedog.net/400/301?id=11" alt="Rocky" />
+      <div>
+        <h3>Rocky</h3>
+        <p>4 éves, aktív, nagyon játékos kan.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-6 text-center text-gray-500 max-w-6xl mx-auto">
+    © 2025 Cortex Royal Mopsz Kennel · cortexroyal@gmail.com · Alsozsolca
+  </footer>
+</body>
+</html>

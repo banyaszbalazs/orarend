@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cortex Royal Mopsz Kennel – Főoldal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      color: #f5f5f5; /* világosabb szöveg */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Háttér külön rétegen blur-ral */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('mopszhatter.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(4px) brightness(0.8);
+      z-index: -1;
+    }
+    header {
+      background: rgba(0,0,0,0.85);
+      border-bottom: 2px solid #00ff66;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    header h1 {
+      color: #00ff66;
+      margin: 0;
+      font-weight: 900;
+      font-size: 1.8rem;
+      text-shadow: 0 0 12px #00ff66, 0 0 4px #000;
+    }
+    nav a {
+      color: #eee;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #00ff66;
+      text-shadow: 0 0 8px #00ff66;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 3rem auto 4rem;
+      padding: 0 1rem;
+    }
+    .intro {
+      margin-bottom: 3rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 0 25px rgba(0,255,102,0.3);
+      animation: fadeIn 1.2s ease;
+    }
+    .intro h2 {
+      font-size: 2.3rem;
+      color: #00ff66;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 0 14px #00ff66, 0 0 6px #000;
+    }
+    .intro p {
+      font-size: 1.15rem;
+      color: #fff;
+      text-shadow: 0 0 6px rgba(0,0,0,0.9);
+    }
+    .features {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .feature-box {
+      background: rgba(0,0,0,0.82);
+      border-radius: 16px;
+      padding: 2rem 1.5rem 2.5rem;
+      box-shadow: 0 0 20px rgba(0,255,102,0.3);
+      flex: 1 1 30%;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+    .feature-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(0,255,102,0.6);
+    }
+    .feature-box h3 {
+      color: #00ff66;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 0 0 12px #00ff66, 0 0 6px #000;
+    }
+    .feature-box p {
+      color: #fafafa;
+      font-size: 1rem;
+      text-align: center;
+      flex-grow: 1;
+      text-shadow: 0 0 6px rgba(0,0,0,0.9);
+    }
+    .feature-box a.btn {
+      margin-top: 2rem;
+      background-color: #00ff66;
+      color: #000;
+      padding: 0.7rem 1.8rem;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-box a.btn:hover {
+      background-color: #00cc52;
+      box-shadow: 0 0 16px #00ff66;
+    }
+    footer {
+      background: rgba(0,0,0,0.85);
+      border-top: 2px solid #00ff66;
+      text-align: center;
+      color: #ddd;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      text-shadow: 0 0 6px #000;
+    }
+    @media (max-width: 900px) {
+      .features {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐾 Cortex Royal Mopsz Kennel</h1>
+    <nav>
+      <a href="index.html" class="active">Főoldal</a>
+      <a href="galeria.html">Galéria</a>
+      <a href="elerhetokutyak.html">Elérhető Kiskutyáink</a>
+      <a href="elerhetoseg.html">Kapcsolat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Üdvözlünk a Cortex Royal Mopsz Kennel Weboldalán!</h2>
+      <p>
+        Családi tenyészetünkben a szeretet és a szakértelem kéz a kézben jár.  
+        Több generáció tapasztalatával nevelünk egészséges, boldog és családbarát kutyusokat.  
+        Ismerd meg, miért érdemes minket választani!
+      </p>
+    </section>
+
+    <section class="features">
+      <article class="feature-box">
+        <h3>Egészség &amp; Minőség</h3>
+        <p>Minden kiskutyánk FCI törzskönyvvel és alapos egészségügyi szűréssel rendelkezik, hogy a legjobbat kapd.</p>
+        <a href="galeria.html" class="btn">Galéria</a>
+      </article>
+      <article class="feature-box">
+        <h3>Szeretet &amp; Gondoskodás</h3>
+        <p>Családias környezetben neveljük kutyáinkat, biztosítva a megfelelő szocializációt és gondoskodást minden nap.</p>
+        <a href="szukaink.html" class="btn">Szukáinkat ismerem</a>
+      </article>
+      <article class="feature-box">
+        <h3>Tapasztalat &amp; Szakértelem</h3>
+        <p>Több generáció tapasztalatával és folyamatos továbbképzéssel garantáljuk a legmagasabb tenyésztési színvonalat.</p>
+        <a href="kanjaink.html" class="btn">Kanjaink</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Cortex Royal Mopsz Kennel · cortexroyal@gmail.com · Alsózsolca
+  </footer>
+</body>
+</html>

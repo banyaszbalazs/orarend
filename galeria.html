@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galéria – Cortex Royal Mopsz Kennel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #cfcfcf;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('mopszhatter.jpg') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -2;
+      filter: blur(10px) brightness(0.4);
+    }
+
+    header {
+      background: rgba(0,0,0,0.8);
+      border-bottom: 2px solid #00ff66;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      color: #00ff66;
+      margin: 0;
+      font-weight: 900;
+      font-size: 1.8rem;
+      text-shadow: 0 0 10px #00ff66;
+    }
+
+    nav a {
+      color: #ddd;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #00ff66;
+      text-shadow: 0 0 6px #00ff66;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 3rem auto 4rem;
+      padding: 0 1rem;
+      z-index: 1;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 12px rgba(0,255,102,0.3);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(0,255,102,0.5);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .lightbox.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,255,102,0.4);
+    }
+
+    .lightbox .close,
+    .lightbox .prev,
+    .lightbox .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: #00ff66;
+      cursor: pointer;
+      padding: 1rem;
+      user-select: none;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+    }
+
+    .lightbox .close {
+      top: 2rem;
+      right: 2rem;
+      font-size: 2rem;
+      transform: none;
+    }
+
+    .lightbox .prev {
+      left: 2rem;
+    }
+
+    .lightbox .next {
+      right: 2rem;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.8);
+      border-top: 2px solid #00ff66;
+      text-align: center;
+      color: #aaa;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐾 Cortex Royal Mopsz Kennel</h1>
+    <nav>
+      <a href="index.html">Főoldal</a>
+      <a href="kolykok.html">Kölykök</a>
+      <a href="galeria.html" class="active">Galéria</a>
+      <a href="elerheto.html">Elérhető Kiskutyáink</a>
+      <a href="elerhetoseg.html">Kapcsolat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <img src="mopsz1.jpg" alt="Mopsz 1" />
+      <img src="mopsz2.jpg" alt="Mopsz 2" />
+      <img src="mopsz3.jpg" alt="Mopsz 3" />
+      <img src="mopsz4.jpg" alt="Mopsz 4" />
+      <img src="mopsz5.jpg" alt="Mopsz 5" />
+      <img src="mopsz6.jpg" alt="Mopsz 6" />
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Cortex Royal Mopsz Kennel · cortexroyal@gmail.com · Alsózsolca
+  </footer>
+
+  <!-- Lightbox script -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <span class="prev" id="prevBtn">&#10094;</span>
+    <img src="" alt="Large view" id="lightboxImage" />
+    <span class="next" id="nextBtn">&#10095;</span>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = index;
+      lightboxImage.src = images[index].src;
+      lightbox.classList.add('active');
+    }
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        showImage(index);
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'Escape') closeBtn.click();
+    });
+  </script>
+</body>
+</html>
